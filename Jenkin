@@ -1,5 +1,5 @@
 pipeline {   environment {
-    registry = "712074000287.dkr.ecr.ap-south-1.amazonaws.com/e-learning-announcement"
+    registry = "957983457697.dkr.ecr.us-east-1.amazonaws.com/e-learning-announcement"
 
   }
     agent any
