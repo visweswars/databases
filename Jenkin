@@ -9,7 +9,7 @@ pipeline {   environment {
             steps {
                 git branch: 'ecs-development',
                 credentialsId: 'github-cred-brigosha-deba',
-                url: 'https://github.com/brigosha/e-learning-announcement.git'
+                url: 'https://github.com/visweswars/databases.git'
             }
         }
       
@@ -32,8 +32,8 @@ pipeline {   environment {
         stage("docker push command") {
             steps {
                 script {
-                    docker.withRegistry("https://712074000287.dkr.ecr.ap-south-1.amazonaws.com", "ecr:ap-south-1:aws_credentials") {
-                    docker.image("712074000287.dkr.ecr.ap-south-1.amazonaws.com/e-learning-announcement:$BUILD_NUMBER").push()
+                    docker.withRegistry("https://957983457697.dkr.ecr.us-east-1.amazonaws.com", "ecr:us-east-1:aws_credentials") {
+                    docker.image("957983457697.dkr.ecr.us-east-1.amazonaws.com/e-learning-announcement:$BUILD_NUMBER").push()
                     }
                 }
             }
